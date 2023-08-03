@@ -1,0 +1,51 @@
+
+
+:root {
+ --color-primyry: #757575;
+ --color-accent: #ff4500;
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.logo {
+    color: #757575;
+    font-family: Raleway; 
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.78px;
+}
+
+.logo .accent {
+    color: var(--color-accent)
+}
+
+.nav-list {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.28px;
+}
+
+
+.nav-link,
+.footer-link {
+    color: var(--color-primyry)
+}
+
+.nav-link:focus,
+.nav-link:hover,
+.footer-link:focus,
+.footer-link:hover {
+    color: var(--color-accent);
+}
