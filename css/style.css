@@ -1,4 +1,8 @@
-
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
 :root {
  --color-primyry: #757575;
@@ -11,12 +15,25 @@ body {
     
 }
 
+h2,
+h3 {
+    text-transform: uppercase;
+}
+
 ul {
     list-style-type: none;
 }
 
 a {
     text-decoration: none;
+}
+
+p {
+    color: var(--color-primyry)
+}
+
+.firsr-letter {
+    color: var(--color-accent);
 }
 
 .logo {
