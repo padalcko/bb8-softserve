@@ -1,8 +1,4 @@
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
+
 
 :root {
  --color-primyry: #757575;
@@ -34,6 +30,13 @@ p {
 
 .firsr-letter {
     color: var(--color-accent);
+}
+
+.header-container {
+    width: 1230px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px; 
 }
 
 .logo {
