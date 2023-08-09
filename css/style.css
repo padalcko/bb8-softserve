@@ -108,30 +108,75 @@ img {
     color: var(--color-accent);
 }
 
- .gallery {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+.gallery {
     text-align: center;
-    max-width: 1230px;
+    padding: 40px 0;
+    margin: 0 au;
+}
+
+.gallery-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
 .image-list {
-    list-style: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .image-item {
-    width: calc(33.33% - 20px);
+    width: 30%;
     margin: 10px;
 }
 
 .image-item img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
+    display: block;
+}
+
+/* Стилі для основного блоку */
+.abilities-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Стилі для центрованого заголовка */
+.center {
+    margin-bottom: 20px;
+}
+
+.center h2 {
+    font-size: 2rem;
+}
+
+/* Стилі для списку блоків */
+.block-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Стилі для кожного блоку */
+.block {
+    width: 30%;
+    margin: 0 20px;
+    text-align: center;
+}
+
+.block h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.block p {
+    font-size: 1rem;
 }
