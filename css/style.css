@@ -14,14 +14,18 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
     
 }
-
+h1,
 h2,
 h3 {
     text-transform: uppercase;
     margin: 0;
+    color: var(--color-primyry);
 }
+
 
 ul {
     list-style-type: none;
@@ -37,19 +41,25 @@ a {
 p {
     color: var(--color-primyry);
     margin: 0;
-    
 }
+
+ p::first-letter {
+    color: var(--color-accent);
 
 img {
     margin: 0;
+    display: block;
 }
 
+}
 .container {
     max-width: 1230px;
     margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
-.firsr-letter {
+.first__letter {
     color: var(--color-accent);
 }
 
@@ -60,10 +70,15 @@ img {
     padding-right: 15px; 
 }
 
+.header-nav {
+    display: flex;
+    align-items: center;
+}
+
 .logo {
     color: #757575;
     font-family: Raleway; 
-    font-size: 26px;
+    font-size: 46px;
     font-weight: 700;
     letter-spacing: 0.78px;
 }
@@ -73,9 +88,34 @@ img {
 }
 
 .nav-list {
+    display: flex;
+    margin-left: 70px;
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 0.28px;
+}
+
+.nav-item {
+    margin-right: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.nav-item:last-child {
+    margin-right: 0;
+}
+
+.button-list {
+    display: flex;
+    margin-left: auto;
+}
+
+.button-item {
+    margin: 5px;
+}
+
+.button-item:last-child {
+    margin-right: 0;
 }
 
 
@@ -108,10 +148,49 @@ img {
     color: var(--color-accent);
 }
 
+.hero {
+    background-image:url(../img/bb8-gif.gif);
+    min-height: 404px;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 20px;
+}
+
+
+.about__title-section {
+    display: flex;
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+
+.first__about-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.first__about-section > p {
+    margin-right: 100px;
+}
+
+.second__about-section {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+.second__about-section > p {
+    margin-left: 100px;
+}
+
+
+.about-image {
+    max-width: 150px;
+}
+
 .gallery {
     text-align: center;
     padding: 40px 0;
-    margin: 0 au;
+    margin: 0 auto;
 }
 
 .gallery-title {
@@ -119,18 +198,21 @@ img {
     margin-bottom: 20px;
 }
 
+.image-slider {
+    position: relative;
+    overflow: hidden;
+}
+
 .image-list {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    flex-wrap: nowrap;
+    transition: transform 0.5s ease;
 }
 
 .image-item {
-    width: 30%;
+    flex: 0 0 calc(33.333% - 20px);
     margin: 10px;
+    transition: transform 0.5s ease;
 }
 
 .image-item img {
@@ -139,44 +221,65 @@ img {
     display: block;
 }
 
-/* Стилі для основного блоку */
-.abilities-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+.controls {
+    margin-top: 20px;
 }
 
-/* Стилі для центрованого заголовка */
-.center {
+.control-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.control-button:hover {
+    background-color: var(--color-accent);
+}
+
+/* Abilities */
+.abilities__title {
     margin-bottom: 20px;
 }
 
-.center h2 {
+.abilities__title h2 {
     font-size: 2rem;
 }
 
-/* Стилі для списку блоків */
-.block-list {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+/* Стилі для списку переваг */
+.abilities__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    align-items:center;
 }
 
-/* Стилі для кожного блоку */
-.block {
-    width: 30%;
-    margin: 0 20px;
-    text-align: center;
-}
 
-.block h3 {
-    font-size: 1.5rem;
+.abilities__list-title {
     margin-bottom: 10px;
 }
 
-.block p {
-    font-size: 1rem;
+.abilities__img {
+   border-radius: 15px;
+   margin-bottom: 10px;
+   max-width: 350px;
+}
+
+
+.main__footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15px;
+    margin-top: 150px;
+}
+.footer__nav-list {
+    display: flex;
+    gap: 40px;
+}
+
+.footer__social-list {
+    display: flex;
+    gap: 10px;
 }
