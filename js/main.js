@@ -1,8 +1,8 @@
-const imageList = document.querySelector(".image-list");
-const prevSlideButton = document.getElementById("prevSlide");
-const nextSlideButton = document.getElementById("nextSlide");
+const imageList = document.querySelector('.image-list');
+const prevSlideButton = document.getElementById('prevSlide');
+const nextSlideButton = document.getElementById('nextSlide');
 const imageWidth = 360;
-const autoScrollInterval = 5000;
+const autoScrollInterval = 10000;
 let currentPosition = 0;
 let visibleSlides = 1; // Починаємо з одного видимого слайда
 
@@ -33,10 +33,10 @@ function showPreviousSlide() {
   updateSliderPosition();
 }
 
-nextSlideButton.addEventListener("click", showNextSlide);
-prevSlideButton.addEventListener("click", showPreviousSlide);
+nextSlideButton.addEventListener('click', showNextSlide);
+prevSlideButton.addEventListener('click', showPreviousSlide);
 
-window.addEventListener("resize", () => {
+window.addEventListener('resize', () => {
   currentPosition = 0;
   updateSliderPosition();
 });
